@@ -16,7 +16,8 @@ html {
    * Remove default margin.
    */
 body {
-  margin: 0; }
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 /* HTML5 display definitions
      ========================================================================== */
@@ -409,13 +410,123 @@ h6 {
 .button,
 label {
   display: flex;
+  margin: 0.5rem;
   margin-bottom: 10px;
   padding: 0.5rem;
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25); }
+  font-family: "Roboto", sans-serif;
+  border: 2px solid gold;
+  cursor: pointer; }
   .button:active,
   label:active {
-    background-color: rgba(201, 188, 188, 0.678);
-    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white; }
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: black; }
+
+.work-place__tool-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0; }
+
+.work-place__color-bar {
+  position: relative; }
+
+.button:hover::after {
+  content: attr(data-title);
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  color: gold;
+  background: #333333;
+  border: 1px solid #333333; }
+
+.pencil.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 0; }
+
+.chooseColor.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 60px; }
+
+.paintBucket.button:hover::after {
+  position: absolute;
+  top: -15px;
+  right: 0; }
+
+.eraser.button:hover::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0; }
+
+.line.button:hover::after {
+  position: absolute;
+  bottom: -10px;
+  left: 60px; }
+
+.rectangle.button:hover::after {
+  position: absolute;
+  right: 0;
+  bottom: -10px; }
+
+.input-color.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 25px; }
+
+.previous.button:hover::after {
+  position: absolute;
+  top: 83px;
+  left: 160px; }
+
+.red.button:hover::after {
+  position: absolute;
+  top: 137px;
+  left: 160px; }
+
+.blue.button:hover::after {
+  position: absolute;
+  top: 190px;
+  left: 160px; }
+
+.bw.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 25px; }
+
+.button--XL.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 25px; }
+
+.sizeL.button:hover::after {
+  position: absolute;
+  top: 27px;
+  left: -55px; }
+
+.sizeM.button:hover::after {
+  position: absolute;
+  top: 84px;
+  left: -55px; }
+
+.sizeS.button:hover::after {
+  position: absolute;
+  top: 144px;
+  left: -55px; }
+
+.getGif.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 0; }
+
+.getApng.button:hover::after {
+  position: absolute;
+  right: 18px;
+  bottom: -15px; }
 
 ul {
   padding: 1rem;
@@ -423,38 +534,15 @@ ul {
 
 .header {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto; }
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: gold; }
 
 .header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.25), 0 4px 3px rgba(0, 0, 0, 0.22); }
-
-.header__title {
-  font-weight: 500;
-  font-size: 1.3rem;
-  line-height: 1em;
-  font-family: "Roboto", sans-serif; }
-
-.header__dropdown--menu,
-.header__dropdown--options {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer; }
-
-.header #logIn,
-.header #logOut {
-  width: 80px;
-  height: 30px;
-  font-size: 14pt;
-  color: white;
-  background-color: #c533a1;
-  border: solid 1px transparent;
-  border-radius: 5px;
-  cursor: pointer; }
+  padding: 0.5rem 2rem; }
 
 .header #userInfo {
   display: none;
@@ -463,11 +551,12 @@ ul {
   height: 30px;
   margin-right: 20px;
   padding-right: 5px;
-  font-size: 16pt;
-  color: #bb7fff;
-  background-color: white;
+  font-size: 0.8rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: gold;
   border: solid 1px transparent;
-  border-color: currentColor;
+  border-color: black;
   border-radius: 5px;
   cursor: pointer; }
 
@@ -479,15 +568,23 @@ ul {
 
 .header #logIn,
 .header #logOut {
-  width: 80px;
-  height: 30px;
-  margin-right: 5px;
-  font-size: 14pt;
-  color: white;
-  background-color: #bb7fff;
-  border: solid 1px transparent;
-  border-radius: 5px;
-  cursor: pointer; }
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: gold;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+  transition: color 0.5s linear;
+  transition: border 0.5s linear; }
+  .header #logIn:hover,
+  .header #logOut:hover {
+    color: gold;
+    background-color: black;
+    border: 3px solid gold;
+    outline: 3px solid black; }
 
 .header #logOut {
   display: none; }
@@ -498,9 +595,10 @@ ul {
 .main {
   display: grid;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 2rem 0;
+  background-color: #ffffff;
   grid-template: "work-place frames canvas animation-preview";
   grid-template-columns: 1fr 1fr 2fr 1fr;
   grid-template-rows: 1fr; }
@@ -560,13 +658,16 @@ ul {
   display: none; }
 
 .active {
-  box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px white; }
+  border-color: black; }
 
 .frames,
 .animation-preview {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.frames__item {
+  position: relative; }
 
 .frame {
   min-width: 150px;
@@ -578,7 +679,7 @@ ul {
   width: 150px;
   height: 150px;
   margin-bottom: 1rem;
-  border: 1px solid black; }
+  border: 2px solid black; }
 
 .scroll-container {
   width: 210px;
@@ -593,6 +694,9 @@ ul {
     overflow-y: auto; }
     .scroll-container:hover h1:after, .scroll-container:focus h1:after {
       content: " shown"; }
+
+.add-frame {
+  padding-top: 0; }
 
 .deleteIcon {
   position: absolute;
@@ -617,10 +721,42 @@ ul {
   background-color: red;
   cursor: pointer; }
 
+.canvas-size__tool-bar {
+  display: flex;
+  flex-direction: column; }
+
+.item__text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+.sizeS,
+.sizeM,
+.sizeL,
+.getGif,
+.getApng {
+  justify-content: center; }
+
+.save-as {
+  position: relative; }
+
+.canvas-size__tool-bar {
+  position: relative; }
+
+.save-as__title {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+.save-as__item {
+  display: flex;
+  padding-top: 0.2rem; }
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   display: none;
   justify-content: center;
   align-items: center;
@@ -694,6 +830,7 @@ ul {
 .modal-show {
   position: relative;
   display: inline-block;
+  margin-left: 11px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   text-decoration: none;
@@ -733,4 +870,29 @@ ul {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.footer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; }
+
+.footer,
+.footer__social {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  font-family: "Roboto", sans-serif;
+  background-color: gold; }
+
+.footer__label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: black; }
+
+.footer__social {
+  list-style: none; }
+
+.social__item {
+  padding-right: 0.5rem; }
 
