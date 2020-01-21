@@ -1,0 +1,65 @@
+.header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: $first-color;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem ;
+}
+
+.header #userInfo {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+  margin-right: 1rem;
+  padding: 1.1rem 1rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  background-color: gold;
+  border: 3px solid black;
+  cursor: pointer;
+}
+.header #userInfo #userImg {
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+}
+
+.header #logIn,
+.header #logOut {
+  padding: 0.5rem 1rem;
+  // width: 80px;
+  // height: 30px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-family: $font-1;
+  color: $third-color;
+  background-color: $first-color;
+  border: 3px solid black;
+  cursor: pointer;
+  transition: background-color 0.5s linear;
+  transition: color 0.5s linear;
+  transition: border 0.5s linear;
+  &:hover {
+    color: $first-color;
+    background-color: $third-color;
+    border: 3px solid $first-color;
+    outline: 3px solid $third-color;
+  }
+}
+
+.header #logOut {
+  display: none;
+}
+.login-google-wrapper {
+  display: flex;
+}

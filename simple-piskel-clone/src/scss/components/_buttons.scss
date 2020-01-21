@@ -1,0 +1,145 @@
+.bucketCursor {
+  cursor: url("../assets/images/bucket.png"), auto;
+}
+.pippeteCursor {
+  cursor: url("../assets/images/pipette.png"), auto;
+}
+.pencilCursor {
+  cursor: url("../assets/images/pencil.png"), auto;
+}
+.eraserCursor {
+  cursor: url("../assets/images/eraser.png"), auto;
+}
+.strokeCursor {
+  cursor: url("../assets/images/stroke.png"), auto;
+}
+.rectangleCursor {
+  cursor: url("../assets/images/rectangle.png"), auto;
+}
+.button,
+label {
+  display: flex;
+  margin: 0.5rem;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  font-family: $font-1;
+  border: 2px solid $first-color;
+  cursor: pointer;
+  &:active {
+    background-color: $second-color;
+    border-color: $third-color;
+  }
+}
+
+.work-place__tool-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+}
+
+.work-place__color-bar {
+  position: relative;
+}
+
+
+.button:hover::after {
+  content: attr(data-title);
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: Arial, sans-serif;
+  color: gold;
+  background: #333333;
+  border: 1px solid #333333;
+}
+
+.pencil.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+.chooseColor.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 60px;
+}
+.paintBucket.button:hover::after {
+  position: absolute;
+  top: -15px;
+  right: 0;
+}
+.eraser.button:hover::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.line.button:hover::after {
+  position: absolute;
+  bottom: -10px;
+  left: 60px;
+}
+.rectangle.button:hover::after {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+}
+.input-color.button:hover::after {
+  position: absolute;
+  top: -15px;
+  left: 25px;
+}
+.previous.button:hover::after {
+  position: absolute;
+  top: 83px;
+  left: 160px;
+}
+.red.button:hover::after {
+  position: absolute;
+  top: 137px;
+  left: 160px;
+}
+.blue.button:hover::after {
+  position: absolute;
+  top: 190px;
+  left: 160px;
+}
+.bw.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 25px;
+}
+
+.button--XL.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 25px;
+}
+.sizeL.button:hover::after {
+  position: absolute;
+  top: 27px;
+  left: -55px;
+}
+.sizeM.button:hover::after {
+  position: absolute;
+  top: 84px;
+  left: -55px;
+}
+.sizeS.button:hover::after {
+  position: absolute;
+  top: 144px;
+  left: -55px;
+}
+.getGif.button:hover::after {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.getApng.button:hover::after {
+  position: absolute;
+  right: 18px;
+  bottom: -15px;
+}
